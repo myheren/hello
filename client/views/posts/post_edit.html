@@ -1,0 +1,18 @@
+<template name="PostEdit">
+    <div class="template-update-post">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{_ "edit_post"}}</h3>
+            </div>
+            <div class="panel-body">
+                {{#autoForm id="edit" collection="Posts" type="update" doc=admin_current_doc}}
+                {{> afQuickField name="title"}}
+                {{> afQuickField name="content"}}
+                {{> afQuickField name="picture"}}
+                {{> afQuickField name="owner"}}
+                <button type="submit" class="btn btn-primary">{{_ "edit_post_btn"}}</button>
+                {{/autoForm}}
+            </div>
+        </div>
+    </div>
+</template>
